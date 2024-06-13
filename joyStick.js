@@ -31,6 +31,7 @@ class JoyStick extends Phaser.Scene{
   }// end create
   
   update() {
+
     this.angleText.setText('Angle: ' + this.angle); // UI updates
     this.distanceText.setText('Force: ' + this.force);
     this.forceText.setText('Distance: ' + this.distance);
@@ -52,8 +53,13 @@ class JoyStick extends Phaser.Scene{
       }// end if (this.leftPointer.active...
 
       if (!this.input.pointer1.active) { // handle analog control end
+        this.origin.setPosition(0, 0); // assign coordinates
+        this.current.setPosition(0, 0); 
         this.origin.alpha = 0; // reduce opacity
         this.current.alpha = 0;
+        this.angle = 0; // get data
+        this.distance = 0;
+        this.force = 0;
       }// end if (!this.movePointer.active...
 
   }// end update
