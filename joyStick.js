@@ -1,4 +1,4 @@
-// BFP Joystick v.2.0
+// BFP Joystick v.2.5
 // Coded by Loroko 
 // Created: 6/10/2024
 // Last Updated: 6/12/2024
